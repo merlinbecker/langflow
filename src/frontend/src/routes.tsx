@@ -114,6 +114,34 @@ const Router = () => {
             }
           />
         </Route>
+        <Route path="/mobileflow/:id/">
+          <Route
+            path="*"
+            element={
+              <ProtectedRoute>
+                <FlowPage view={true}/>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path=""
+            element={
+              <ProtectedRoute>
+                <FlowPage view={true}/>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="view"
+            element={
+              <ProtectedRoute>
+                <ViewPage />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
+
+        
         <Route path="/flow/:id/">
           <Route
             path="*"
@@ -127,7 +155,7 @@ const Router = () => {
             path=""
             element={
               <ProtectedRoute>
-                <FlowPage />
+                <FlowPage/>
               </ProtectedRoute>
             }
           />

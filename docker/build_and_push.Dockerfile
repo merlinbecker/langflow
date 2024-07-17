@@ -76,11 +76,11 @@ FROM python:3.12.3-slim as runtime
 
 RUN apt-get -y update \
     && apt-get install --no-install-recommends -y \
-    curl \
+    curl git-all \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-LABEL org.opencontainers.image.title=langflow
+LABEL org.opencontainers.image.title=langflow_custom
 LABEL org.opencontainers.image.authors=['Langflow']
 LABEL org.opencontainers.image.licenses=MIT
 LABEL org.opencontainers.image.url=https://github.com/langflow-ai/langflow
