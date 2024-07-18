@@ -76,7 +76,7 @@ FROM python:3.12.3-slim as runtime
 
 RUN apt-get -y update \
     && apt-get install --no-install-recommends -y \
-    curl git-all \
+    curl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

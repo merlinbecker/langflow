@@ -59,6 +59,8 @@ RUN apt-get update \
     npm \
     # gcc
     gcc \
+    # git 
+    git-all \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
